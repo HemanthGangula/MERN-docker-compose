@@ -1,0 +1,19 @@
+frontend:
+  image:
+    repository: mern-docker-compose-frontend
+    tag: latest
+  replicaCount: 2  # Set the number of replicas for the frontend
+
+backend:
+  image:
+    repository: mern-docker-compose-backend
+    tag: latest
+  replicaCount: 2  # Set the number of replicas for the backend
+
+mongodb:
+  image:
+    repository: mongo
+    tag: latest
+  replicaCount: 1  # Set the number of replicas for MongoDB
+  storage:
+    size: 1Gi  # Specify storage for MongoDB (PersistentVolumeClaim size)
